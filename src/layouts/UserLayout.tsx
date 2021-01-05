@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import type { ConnectProps } from 'umi';
 import { SelectLang, useIntl, connect } from 'umi';
 import React from 'react';
+import Footer from '@/components/GlobalFooter/index';
 import type { ConnectState } from '@/models/connect';
 import styles from './UserLayout.less';
 
@@ -45,6 +46,7 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
           <SelectLang />
         </div>
         <div className={styles.content}>{children}</div>
+        <Footer />
       </div>
     </HelmetProvider>
   );
